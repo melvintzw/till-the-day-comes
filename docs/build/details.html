@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Details &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qualifiers-intro.html">Qualifiers Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finals-intro.html">Finals Introduction</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Challenge Details</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/details.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="challenge-details">
+<h1>Challenge Details<a class="headerlink" href="#challenge-details" title="Permalink to this heading"></a></h1>
+<section id="challenge-task">
+<h2>Challenge Task<a class="headerlink" href="#challenge-task" title="Permalink to this heading"></a></h2>
+<p>Your task is to develop code that will enable a SAR robot to autonomously
+search a disaster site for human survivors and report high priority survirors
+for extraction.</p>
+<p>To do so you will need to accomplish the following subtasks:
+1. Identify potential locations of interest
+2. Plan a path to a location of interest
+3. Navigate along the planned path</p>
+<p>Human survivors are represented as image targets mounted on vertical surfaces
+throughout the arena. These image targets will each display a human figure in
+poses, which can be classified into fallen or not fallen. Targets should be
+reported with the correct classification to assist rescuers in prioritizing
+targets.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/fallen_sample.png"><img alt="_images/fallen_sample.png" src="_images/fallen_sample.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Example of fallen target.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/standing_sample.png"><img alt="_images/standing_sample.png" src="_images/standing_sample.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Example of not fallen target.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="challenge-setup">
+<h2>Challenge Setup<a class="headerlink" href="#challenge-setup" title="Permalink to this heading"></a></h2>
+<figure class="align-center" id="id4">
+<span id="id1"></span><img alt="_images/challenge_setup.svg" src="_images/challenge_setup.svg" /><figcaption>
+<p><span class="caption-text">Challenge setup</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above figure shows an overview of the Robotics Challenge setup.
+A computer will be provided (“Participant Computer”) on which to deploy
+your code.</p>
+<p>Services will be provided that enable you to interact with the robot and
+arena environment, as well as to report any targets identified. For
+interacting with the robot the Robomaster SDK will be used directly. All other
+services are served by one or more Challenge Servers and available as ReST
+APIs. The Challenge SDK simplifies the use of these services by providing
+an easy-to-use Python interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While you may use the ReST services directly this is strongly discouraged.
+For details on the provided services see <a class="reference internal" href="services.html"><span class="doc">Provided Services</span></a>.</p>
+</div>
+<p>Your autonomy code will use the Robomaster SDK and should use the provided
+Challenge SDK. Additionally you must provide the <cite>CV Model</cite> and <cite>NLP Model</cite>
+from the earlier CV and NLP challenges. These models should be wrapped in the
+provided <cite>CV Service</cite> and <cite>NLP Service</cite> interfaces to allow you to use the
+provided mock modules (see <a class="reference internal" href="simulation.html#mocks"><span class="std std-ref">Mocks</span></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is strongly recommended that your models be optimized and deployed
+using an inference runtime as large unoptimized models may exhaust the
+compute resources on the computers used for the challenge.</p>
+<p>Details on how to do this with ONNX Runtime can be found in <a class="reference internal" href="models.html"><span class="doc">Adding ML models</span></a>.</p>
+</div>
+</section>
+<section id="challenge-scoring">
+<h2>Challenge Scoring<a class="headerlink" href="#challenge-scoring" title="Permalink to this heading"></a></h2>
+<p>Scoring will be done using the <a class="reference internal" href="services.html#reporting-service"><span class="std std-ref">Reporting Service</span></a>. Reports contain the
+image seen by the robot and the detected target bounding box, and will be used
+to confirm that the detected target is correct.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Missed Target</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Correctly reported target</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Misreported target</p></td>
+<td><p>0.5</p></td>
+</tr>
+</tbody>
+</table>
+<p>You will be ranked based on your final score. Only the event of a tie, a tie-breaker
+score will be calculated as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="n">number_of_reported_targets</span> <span class="o">/</span> <span class="p">(</span><span class="n">time_of_last_report</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The team with the higher tie-breaker score will be ranked higher.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
