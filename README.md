@@ -5,7 +5,7 @@
 pip install sphinx sphinx-autoapi sphinx-rtd-theme
 
 # build docs
-sphinx-build -b html source build 
+sphinx-build -b html source docs 
 ```
 
 Access the docs at `docs/build/index.html`.
